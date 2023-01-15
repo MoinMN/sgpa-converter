@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Converter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h2>SGPA Converter</h2>
+    </header>
+
+    <div class="container">
+        <p>Select you want to convert SGPA to ...?</p>
+        <form>
+            <input type="radio" name="select" id="select-cgpa">
+            <label for="select-cgpa">CGPA</label>
+            <input type="radio" name="select" id="select-percent">
+            <label for="select-percent">Percentage</label><br>
+            <button type="button" class="btn-main" onclick="start()">Start</button>
+            <button type="button" class="btn-main" onclick="restart()">Reset</button>
+        </form>
+    </div>
+    
+    <div id="cgpa">
+        <h2>SGPA to CGPA Converter</h2>
+        <form>
+            <label for="total-sem-cgpa">Enter Total Number of Semesters:</label>
+            <input type="number" name="total-sem-cgpa" id="total-sem-cgpa"><br>
+            <label for="sum-sgpa-cgpa">Enter Sum of all SGPA: </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <input type="number" name="sum-sgpa-cgpa" id="sum-sgpa-cgpa"><br>
+            <button type="button" class="btn" onclick="calculate_cgpa()">Calculate</button>
+            <button type="reset" class="btn" value="reset">Reset</button><br><br>
+            <label for="result-cgpa">SGPA to CGPA:</label>
+            <input type="text" name="result-cgpa" id="result-cgpa" readonly="readonly"><br>
+        </form>
+    </div>
+
+    <div id="percent">
+        <h2>SGPA to Percentage Converter</h2>
+        <form>
+            <label for="sum-sgpa-percent">Enter SGPA:</label>
+            <input type="number" name="sum-sgpa-percent" id="sum-sgpa-percent"><br>
+            <button type="button" class="btn" onclick="calculate_percent()">Calculate</button>
+            <button type="reset" class="btn" value="reset">Reset</button><br><br>
+            <label for="result-percent">SGPA to Percentage:</label>
+            <input type="text" name="result-percent" id="result-percent" readonly="readonly"><br>
+        </form>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
